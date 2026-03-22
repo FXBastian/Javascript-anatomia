@@ -1,0 +1,357 @@
+# 📘 JavaScript — Anatomia Completa da Linguagem
+
+> Material profissional de estudo de JavaScript, do básico ao avançado.
+> Organizado como documentação técnica modular, pronto para leitura no VS Code e exportação para PDF.
+
+---
+
+## 🧭 Visão Geral
+
+Este repositório é um **guia completo de JavaScript** estruturado como um livro técnico. Cada módulo é uma pasta contendo arquivos `.md` independentes que cobrem subtemas com:
+
+- Definição clara
+- Explicação detalhada
+- Estrutura interna (como funciona por baixo dos panos)
+- Exemplos de código comentados
+- Casos de uso reais
+- Boas práticas e erros comuns
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+javascript-estudo/
+│
+├── 01-fundamentos/
+│   ├── README.md
+│   ├── sintaxe.md
+│   ├── tipos-de-dados.md
+│   ├── variaveis.md
+│   └── operadores.md
+│
+├── 02-controle-de-execucao/
+│   ├── README.md
+│   ├── condicionais.md
+│   ├── loops.md
+│   └── controle-de-fluxo.md
+│
+├── 03-funcoes/
+│   ├── README.md
+│   ├── declaracao.md
+│   ├── parametros-retorno.md
+│   ├── arrow-functions.md
+│   └── funcoes-avancadas.md
+│
+├── 04-estruturas-de-dados/
+│   ├── README.md
+│   ├── objetos.md
+│   └── arrays.md
+│
+├── 05-orientacao-a-objetos/
+│   ├── README.md
+│   ├── classes.md
+│   ├── heranca.md
+│   └── prototipos.md
+│
+├── 06-contexto-de-execucao/
+│   ├── README.md
+│   ├── execution-context.md
+│   ├── call-stack.md
+│   ├── hoisting.md
+│   └── escopo.md
+│
+├── 07-this/
+│   ├── README.md
+│   └── this.md
+│
+├── 08-assincrono/
+│   ├── README.md
+│   ├── callbacks.md
+│   ├── promises.md
+│   ├── async-await.md
+│   └── event-loop.md
+│
+├── 09-es6-plus/
+│   ├── README.md
+│   ├── destructuring.md
+│   ├── spread-rest.md
+│   ├── template-literals.md
+│   └── optional-chaining.md
+│
+├── 10-colecoes/
+│   ├── README.md
+│   ├── map.md
+│   └── set.md
+│
+├── 11-iteradores/
+│   ├── README.md
+│   ├── iterators.md
+│   └── generators.md
+│
+├── 12-builtins/
+│   ├── README.md
+│   ├── string.md
+│   ├── number.md
+│   ├── math.md
+│   ├── date.md
+│   └── json.md
+│
+├── 13-dom/
+│   ├── README.md
+│   ├── selecao.md
+│   ├── eventos.md
+│   └── manipulacao.md
+│
+├── 14-web-apis/
+│   ├── README.md
+│   ├── fetch.md
+│   ├── storage.md
+│   └── timers.md
+│
+├── 15-modulos/
+│   ├── README.md
+│   └── import-export.md
+│
+├── 16-erros/
+│   ├── README.md
+│   └── try-catch.md
+│
+├── 17-seguranca/
+│   ├── README.md
+│   ├── coercoes.md
+│   └── comparacoes.md
+│
+├── 18-performance/
+│   ├── README.md
+│   └── memoria.md
+│
+└── README.md  ← você está aqui
+```
+
+---
+
+## 📖 Índice dos Módulos
+
+| # | Módulo | Descrição |
+|---|--------|-----------|
+| 01 | **Fundamentos da Linguagem** | Sintaxe, tipos, variáveis e operadores |
+| 02 | **Controle de Execução** | Condicionais, loops e controle de fluxo |
+| 03 | **Funções** | Declaração, parâmetros, arrow functions e funções avançadas |
+| 04 | **Estruturas de Dados** | Objetos e Arrays em profundidade |
+| 05 | **Orientação a Objetos** | Classes, herança e protótipos |
+| 06 | **Contexto de Execução** | Execution Context, Call Stack, Hoisting e Escopo |
+| 07 | **This** | Regras do `this` e diferenças entre function e arrow |
+| 08 | **Assincronismo** | Callbacks, Promises, Async/Await e Event Loop |
+| 09 | **ES6+** | Destructuring, Spread/Rest, Template Literals e mais |
+| 10 | **Coleções Avançadas** | Map, Set, WeakMap e WeakSet |
+| 11 | **Iteradores e Generators** | Iterator Protocol e Generator Functions |
+| 12 | **Built-in Objects** | String, Number, Math, Date e JSON |
+| 13 | **Manipulação de DOM** | Seleção, eventos e alteração de elementos |
+| 14 | **Web APIs** | Fetch, Storage e Timers |
+| 15 | **Módulos** | Import, Export e organização de arquivos |
+| 16 | **Tratamento de Erros** | try/catch/finally e throw |
+| 17 | **Segurança e Comportamento** | Strict mode, coerção e comparações |
+| 18 | **Performance e Memória** | Garbage Collection e valor vs referência |
+
+---
+
+## 🧠 Resumo Geral da Arquitetura do JavaScript
+
+JavaScript é uma linguagem **dinâmica**, **interpretada** (ou compilada just-in-time), **baseada em protótipos**, com **tipagem fraca** e **single-threaded** com modelo de concorrência baseado em **Event Loop**.
+
+### Pilares da Linguagem
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    JAVASCRIPT ENGINE                            │
+│                                                                 │
+│  ┌──────────────┐  ┌──────────────┐  ┌───────────────────────┐ │
+│  │  PARSER       │→│  AST          │→│  BYTECODE / JIT       │ │
+│  │  (Análise     │  │  (Árvore de  │  │  (Compilação em      │ │
+│  │   Léxica)     │  │   Sintaxe)   │  │   tempo de execução) │ │
+│  └──────────────┘  └──────────────┘  └───────────────────────┘ │
+│                                                                 │
+│  ┌──────────────────────────────────────────────────┐          │
+│  │           EXECUTION CONTEXT                       │          │
+│  │  ┌────────────┐ ┌────────────┐ ┌───────────────┐ │          │
+│  │  │ Variable   │ │ Scope      │ │ this          │ │          │
+│  │  │ Environment│ │ Chain      │ │ Binding       │ │          │
+│  │  └────────────┘ └────────────┘ └───────────────┘ │          │
+│  └──────────────────────────────────────────────────┘          │
+│                                                                 │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐         │
+│  │  CALL STACK  │  │  HEAP        │  │  EVENT LOOP  │         │
+│  │  (Pilha de   │  │  (Memória    │  │  (Fila de    │         │
+│  │   Execução)  │  │   Dinâmica)  │  │   Eventos)   │         │
+│  └──────────────┘  └──────────────┘  └──────────────┘         │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Camadas Fundamentais
+
+1. **Tipos e Valores** — A base: primitivos (`string`, `number`, `boolean`, `null`, `undefined`, `symbol`, `bigint`) e objetos (tudo que não é primitivo).
+
+2. **Variáveis e Escopo** — `var` (function-scoped), `let` e `const` (block-scoped). O escopo léxico define onde as variáveis são acessíveis.
+
+3. **Funções** — Cidadãs de primeira classe. Podem ser atribuídas a variáveis, passadas como argumentos e retornadas de outras funções. São a base de closures.
+
+4. **Protótipos** — Todo objeto tem um `[[Prototype]]`. Classes em JS são açúcar sintático sobre o sistema de protótipos.
+
+5. **Contexto de Execução** — Cada chamada de função cria um novo contexto com seu escopo, variáveis e binding do `this`.
+
+6. **Event Loop** — O modelo de concorrência. JavaScript é single-threaded, mas usa filas (macrotask e microtask) para lidar com operações assíncronas sem bloquear.
+
+7. **APIs do Ambiente** — O navegador (ou Node.js) fornece APIs extras: DOM, Fetch, Timers, Storage, etc. Não fazem parte do JS puro, mas são essenciais na prática.
+
+### Como Tudo Se Conecta
+
+```
+Código JavaScript
+       │
+       ▼
+┌─────────────────┐
+│   FUNDAMENTOS   │ ← Sintaxe, Tipos, Variáveis, Operadores
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ CONTROLE FLUXO  │ ← Condicionais, Loops, Break/Continue
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│    FUNÇÕES      │ ← Declaração, Closures, Higher-Order
+└────────┬────────┘
+         │
+    ┌────┴────┐
+    ▼         ▼
+┌────────┐ ┌──────────┐
+│ DADOS  │ │   OOP    │ ← Objetos, Arrays │ Classes, Protótipos
+└───┬────┘ └────┬─────┘
+    │            │
+    └─────┬──────┘
+          ▼
+┌─────────────────┐
+│   CONTEXTO      │ ← Execution Context, Scope, this, Hoisting
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  ASSÍNCRONO     │ ← Callbacks, Promises, Async/Await, Event Loop
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│   ECOSSISTEMA   │ ← DOM, Web APIs, Módulos, ES6+, Built-ins
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│   QUALIDADE     │ ← Erros, Segurança, Performance
+└─────────────────┘
+```
+
+---
+
+## 🗺️ Mapa Mental Textual
+
+```
+                            JAVASCRIPT
+                                │
+        ┌───────────┬───────────┼───────────┬───────────┐
+        │           │           │           │           │
+   FUNDAMENTOS   FUNÇÕES    OBJETOS    ASSÍNCRONO  AMBIENTE
+        │           │           │           │           │
+   ┌────┴────┐   ┌──┴──┐   ┌───┴───┐   ┌──┴──┐   ┌───┴───┐
+   │         │   │     │   │       │   │     │   │       │
+ Tipos    Var  Arrow  HOF  Proto  Class CB  Prom  DOM   APIs
+   │       │   │     │   │       │   │     │   │       │
+ Ops    Scope Clos  Map  Herança Enc Async Event Fetch  Mod
+                              │         │         │
+                           this      EvLoop   Storage
+```
+
+---
+
+## 🛤️ Guia de Estudo — Roadmap Passo a Passo
+
+### Fase 1: Base Sólida (Semanas 1–2)
+> Objetivo: Entender como a linguagem funciona no nível mais básico.
+
+1. ✅ **Módulo 01** — Fundamentos da Linguagem
+2. ✅ **Módulo 02** — Controle de Execução
+3. ✅ **Módulo 03** — Funções
+
+**Checkpoint:** Você consegue criar programas simples com lógica, loops e funções?
+
+### Fase 2: Dados e Objetos (Semanas 3–4)
+> Objetivo: Dominar manipulação de dados e entender OOP em JS.
+
+4. ✅ **Módulo 04** — Estruturas de Dados
+5. ✅ **Módulo 05** — Orientação a Objetos
+
+**Checkpoint:** Você consegue modelar dados com objetos/classes e manipular arrays fluentemente?
+
+### Fase 3: Motor Interno (Semanas 5–6)
+> Objetivo: Entender o que acontece "por baixo do capô".
+
+6. ✅ **Módulo 06** — Contexto de Execução
+7. ✅ **Módulo 07** — This
+
+**Checkpoint:** Você consegue prever o valor de `this` e entender hoisting sem hesitar?
+
+### Fase 4: Assincronismo (Semanas 7–8)
+> Objetivo: Dominar o modelo assíncrono — requisito obrigatório para qualquer dev JS.
+
+8. ✅ **Módulo 08** — Assincronismo
+
+**Checkpoint:** Você entende a diferença entre microtask/macrotask e sabe usar async/await com tratamento de erro?
+
+### Fase 5: JavaScript Moderno (Semanas 9–10)
+> Objetivo: Dominar as features do ES6+ que são padrão na indústria.
+
+9. ✅ **Módulo 09** — ES6+
+10. ✅ **Módulo 10** — Coleções Avançadas
+11. ✅ **Módulo 11** — Iteradores e Generators
+
+**Checkpoint:** Você usa destructuring, spread e Map/Set naturalmente no código?
+
+### Fase 6: Ferramentas da Linguagem (Semanas 11–12)
+> Objetivo: Conhecer os objetos nativos e saber trabalhar com DOM e APIs.
+
+12. ✅ **Módulo 12** — Built-in Objects
+13. ✅ **Módulo 13** — DOM
+14. ✅ **Módulo 14** — Web APIs
+15. ✅ **Módulo 15** — Módulos
+
+**Checkpoint:** Você consegue construir uma aplicação web completa com fetch, DOM e módulos?
+
+### Fase 7: Qualidade Profissional (Semanas 13–14)
+> Objetivo: Escrever código seguro, robusto e performático.
+
+16. ✅ **Módulo 16** — Tratamento de Erros
+17. ✅ **Módulo 17** — Segurança e Comportamento
+18. ✅ **Módulo 18** — Performance e Memória
+
+**Checkpoint:** Você sabe identificar memory leaks, entende coerção e escreve código defensivo?
+
+---
+
+## 📋 Como Usar Este Material
+
+1. **Estudo sequencial**: Siga o roadmap acima, módulo por módulo
+2. **Consulta rápida**: Use o índice para ir direto ao tema desejado
+3. **Revisão**: Cada README de módulo tem um resumo do que foi estudado
+4. **Prática**: Execute os exemplos de código no console do navegador ou Node.js
+5. **Exportação**: Use extensões como *Markdown PDF* no VS Code para gerar PDFs
+
+---
+
+## 📜 Licença
+
+Material de estudo pessoal. Uso livre para fins educacionais.
+
+---
+
+> *"Primeiro, aprenda os fundamentos. Depois, entenda o porquê. Por fim, domine o como."*
