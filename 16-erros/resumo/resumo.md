@@ -1,6 +1,6 @@
 # Tratamento de Erros — Resumo Consolidado
 
-## try / catch / finally
+## Visao geral
 
 O `try` envolve código que pode falhar. Se falhar, o `catch` recebe o erro. O `finally` **sempre** executa, deu erro ou não.
 

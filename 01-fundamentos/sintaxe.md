@@ -149,22 +149,111 @@ let _idInterno = 42;
 
 São palavras que o JavaScript usa internamente e que **não podem ser usadas como identificadores**.
 
-### Lista completa das palavras reservadas
+### Lista completa com significado e exemplo
 
-```
-break       case        catch       continue    debugger
-default     delete      do          else        finally
-for         function    if          in          instanceof
-new         return      switch      this        throw
-try         typeof      var         void        while
-with
+#### Controle de fluxo
 
-// Adicionadas em versões mais recentes:
-class       const       enum        export      extends
-import      super       implements  interface   let
-package     private     protected   public      static
-yield       await       async
-```
+| Palavra | Significado | Exemplo |
+|---------|------------|---------|
+| `if` | "Se" — executa um bloco se a condição for verdadeira | `if (x > 0) { }` |
+| `else` | "Senão" — executa se o `if` for falso | `if (x > 0) { } else { }` |
+| `switch` | Seleciona entre múltiplos casos com base em um valor | `switch (cor) { case "azul": ... }` |
+| `case` | Define um caso dentro do `switch` | `case "azul": console.log("azul"); break;` |
+| `default` | Caso padrão do `switch` (quando nenhum `case` combina) | `default: console.log("outro");` |
+| `break` | Interrompe um loop ou `switch` | `for (...) { if (x) break; }` |
+| `continue` | Pula para a próxima iteração do loop | `for (...) { if (x) continue; }` |
+| `return` | Retorna um valor e encerra a função | `function soma(a, b) { return a + b; }` |
+
+#### Loops (repetição)
+
+| Palavra | Significado | Exemplo |
+|---------|------------|---------|
+| `for` | Loop com contador (inicialização, condição, incremento) | `for (let i = 0; i < 5; i++) { }` |
+| `while` | Loop que repete enquanto a condição for verdadeira | `while (x > 0) { x--; }` |
+| `do` | Loop que executa pelo menos uma vez, depois testa a condição | `do { x--; } while (x > 0);` |
+| `in` | Itera sobre as chaves (propriedades) de um objeto | `for (let chave in obj) { }` |
+
+#### Funções e variáveis
+
+| Palavra | Significado | Exemplo |
+|---------|------------|---------|
+| `function` | Declara uma função | `function saudar() { }` |
+| `var` | Declara variável com escopo de função (legado) | `var nome = "Felix";` |
+| `let` | Declara variável com escopo de bloco (reatribuível) | `let idade = 25;` |
+| `const` | Declara constante com escopo de bloco (não reatribuível) | `const PI = 3.14;` |
+| `void` | Avalia uma expressão e retorna `undefined` | `void 0` → `undefined` |
+
+#### Tratamento de erros
+
+| Palavra | Significado | Exemplo |
+|---------|------------|---------|
+| `try` | Tenta executar um bloco que pode gerar erro | `try { JSON.parse(texto); }` |
+| `catch` | Captura o erro gerado dentro do `try` | `catch (erro) { console.log(erro); }` |
+| `finally` | Executa sempre, com ou sem erro | `finally { conexao.fechar(); }` |
+| `throw` | Lança um erro manualmente | `throw new Error("deu ruim");` |
+
+#### Tipos e verificação
+
+| Palavra | Significado | Exemplo |
+|---------|------------|---------|
+| `typeof` | Retorna o tipo de um valor como string | `typeof 42` → `"number"` |
+| `instanceof` | Verifica se um objeto é instância de uma classe | `[] instanceof Array` → `true` |
+| `delete` | Remove uma propriedade de um objeto | `delete obj.nome;` |
+
+#### Orientação a objetos
+
+| Palavra | Significado | Exemplo |
+|---------|------------|---------|
+| `class` | Declara uma classe (modelo para criar objetos) | `class Animal { }` |
+| `new` | Cria uma nova instância de uma classe/construtor | `new Animal("Rex")` |
+| `this` | Referência ao objeto atual (contexto de execução) | `this.nome = "Felix";` |
+| `extends` | Faz uma classe herdar de outra | `class Gato extends Animal { }` |
+| `super` | Chama o construtor/método da classe pai | `super("Rex");` |
+| `static` | Define método/propriedade da classe (não da instância) | `static criar() { }` |
+
+#### Módulos (ES6+)
+
+| Palavra | Significado | Exemplo |
+|---------|------------|---------|
+| `import` | Importa funcionalidade de outro módulo | `import { soma } from "./math.js";` |
+| `export` | Exporta funcionalidade para outros módulos | `export function soma(a, b) { }` |
+
+#### Assíncrono
+
+| Palavra | Significado | Exemplo |
+|---------|------------|---------|
+| `async` | Marca uma função como assíncrona (retorna Promise) | `async function buscar() { }` |
+| `await` | Pausa a função async até a Promise resolver | `const dados = await fetch(url);` |
+
+#### Iteradores e generators
+
+| Palavra | Significado | Exemplo |
+|---------|------------|---------|
+| `yield` | Pausa um generator e retorna um valor | `function* gen() { yield 1; }` |
+
+#### Depuração
+
+| Palavra | Significado | Exemplo |
+|---------|------------|---------|
+| `debugger` | Para a execução e abre o depurador do navegador | `debugger;` |
+
+#### Contexto especial
+
+| Palavra | Significado | Exemplo |
+|---------|------------|---------|
+| `with` | Estende o escopo (⚠️ **proibido** em strict mode, evite sempre) | `with (obj) { }` — não use |
+
+#### Reservadas para o futuro (não usáveis ainda)
+
+| Palavra | Para que será usada |
+|---------|-------------------|
+| `enum` | Enumerações (como em TypeScript) |
+| `implements` | Interfaces (reservada para uso futuro) |
+| `interface` | Declaração de contratos de tipo |
+| `package` | Organização de código em pacotes |
+| `private` | Membro privado de classe (já existe com `#`) |
+| `protected` | Membro protegido (visível só na classe e filhas) |
+| `public` | Membro público (padrão atual) |
 
 ### Exemplo de erro
 

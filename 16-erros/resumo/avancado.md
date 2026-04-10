@@ -1,6 +1,6 @@
 # Tratamento de Erros — Visão Avançada
 
-## Como a Engine Lida com Erros
+## Funcionamento real do JavaScript
 
 Quando um erro acontece, a engine JavaScript faz o seguinte:
 
@@ -67,7 +67,7 @@ for (const item of lista) {
 
 ---
 
-## Pegadinhas que Devs Cometem
+## Pegadinhas comuns
 
 ### 1. Engolir erros silenciosamente
 
@@ -158,7 +158,7 @@ console.log(teste()); // "do finally"
 
 ---
 
-## Erros Síncronos vs Assíncronos
+## Comparacoes importantes
 
 | Aspecto | Síncrono | Assíncrono (Promise) |
 |:--------|:---------|:---------------------|
@@ -299,7 +299,7 @@ async function handleGetUsuario(req, res) {
 
 ---
 
-## Observabilidade — Erros em Produção
+## Modelo mental
 
 Em produção, tratar erro não é só `console.error`. Pense em:
 

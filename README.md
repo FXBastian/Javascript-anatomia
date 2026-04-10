@@ -28,66 +28,144 @@ javascript-estudo/
 │   ├── sintaxe.md
 │   ├── tipos-de-dados.md
 │   ├── variaveis.md
-│   └── operadores.md
+│   ├── operadores.md
+│   ├── treino-fundamentos.js
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 02-controle-de-execucao/
 │   ├── README.md
 │   ├── condicionais.md
 │   ├── loops.md
-│   └── controle-de-fluxo.md
+│   ├── controle-de-fluxo.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 03-funcoes/
 │   ├── README.md
 │   ├── declaracao.md
 │   ├── parametros-retorno.md
 │   ├── arrow-functions.md
-│   └── funcoes-avancadas.md
+│   ├── funcoes-avancadas.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 04-estruturas-de-dados/
 │   ├── README.md
 │   ├── objetos.md
-│   └── arrays.md
+│   ├── arrays.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 05-orientacao-a-objetos/
 │   ├── README.md
 │   ├── classes.md
 │   ├── heranca.md
-│   └── prototipos.md
+│   ├── prototipos.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 06-contexto-de-execucao/
 │   ├── README.md
 │   ├── execution-context.md
 │   ├── call-stack.md
 │   ├── hoisting.md
-│   └── escopo.md
+│   ├── escopo.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 07-this/
 │   ├── README.md
-│   └── this.md
+│   ├── this.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 08-assincrono/
 │   ├── README.md
 │   ├── callbacks.md
 │   ├── promises.md
 │   ├── async-await.md
-│   └── event-loop.md
+│   ├── event-loop.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 09-es6-plus/
 │   ├── README.md
 │   ├── destructuring.md
 │   ├── spread-rest.md
 │   ├── template-literals.md
-│   └── optional-chaining.md
+│   ├── optional-chaining.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 10-colecoes/
 │   ├── README.md
 │   ├── map.md
-│   └── set.md
+│   ├── set.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 11-iteradores/
 │   ├── README.md
 │   ├── iterators.md
-│   └── generators.md
+│   ├── generators.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 12-builtins/
 │   ├── README.md
@@ -95,36 +173,147 @@ javascript-estudo/
 │   ├── number.md
 │   ├── math.md
 │   ├── date.md
-│   └── json.md
+│   ├── json.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 13-dom/
 │   ├── README.md
 │   ├── selecao.md
 │   ├── eventos.md
-│   └── manipulacao.md
+│   ├── manipulacao.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 14-web-apis/
 │   ├── README.md
 │   ├── fetch.md
 │   ├── storage.md
-│   └── timers.md
+│   ├── timers.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 15-modulos/
 │   ├── README.md
-│   └── import-export.md
+│   ├── import-export.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 16-erros/
 │   ├── README.md
-│   └── try-catch.md
+│   ├── try-catch.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 17-seguranca/
 │   ├── README.md
 │   ├── coercoes.md
-│   └── comparacoes.md
+│   ├── comparacoes.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 ├── 18-performance/
 │   ├── README.md
-│   └── memoria.md
+│   ├── memoria.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
+│
+├── 19-event-loop-e-callbacks-avancado/
+│   ├── README.md
+│   ├── simulacao-event-loop.js
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
+│
+├── 20-arquitetura/
+│   ├── README.md
+│   ├── design-patterns.md
+│   ├── module-pattern.md
+│   ├── observer-pattern.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
+│
+├── 21-node-e-ambiente/
+│   ├── README.md
+│   ├── node-basico.md
+│   ├── http-server.md
+│   ├── filesystem.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
+│
+├── 22-testes/
+│   ├── README.md
+│   ├── unitarios.md
+│   ├── mocks.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
+│
+├── 23-engenharia/
+│   ├── README.md
+│   ├── debugging.md
+│   ├── profiling.md
+│   ├── refatoracao.md
+│   ├── resumo/
+│   │   ├── resumo.md
+│   │   └── avancado.md
+│   ├── projetos/
+│   │   └── README.md
+│   └── desafios/
+│       └── README.md
 │
 └── README.md  ← você está aqui
 ```
@@ -153,6 +342,11 @@ javascript-estudo/
 | 16 | **Tratamento de Erros** | try/catch/finally e throw |
 | 17 | **Segurança e Comportamento** | Strict mode, coerção e comparações |
 | 18 | **Performance e Memória** | Garbage Collection e valor vs referência |
+| 19 | **Event Loop e Callbacks Avançado** | Call Stack, Web APIs, Microtask/Macrotask Queue e simulação do Event Loop |
+| 20 | **Arquitetura e Design Patterns** | Factory, Singleton, Observer, Strategy, Module Pattern |
+| 21 | **Node.js e Ambiente** | Runtime, HTTP Server, File System |
+| 22 | **Testes** | Testes unitários, Mocks, Stubs e Spies |
+| 23 | **Engenharia de Software** | Debugging, Profiling e Refatoração |
 
 ---
 
@@ -249,6 +443,11 @@ Código JavaScript
          ▼
 ┌─────────────────┐
 │   QUALIDADE     │ ← Erros, Segurança, Performance
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  ENGENHARIA     │ ← Arquitetura, Node.js, Testes, Debugging
 └─────────────────┘
 ```
 
@@ -270,6 +469,16 @@ Código JavaScript
  Ops    Scope Clos  Map  Herança Enc Async Event Fetch  Mod
                               │         │         │
                            this      EvLoop   Storage
+                                        │
+                              ┌─────────┼─────────┐
+                              │         │         │
+                          Arquitet.   Node.js   Testes
+                              │         │         │
+                          Patterns  HTTP/FS   Mocks
+                              │
+                          Engenharia
+                              │
+                        Debug/Profile
 ```
 
 ---
@@ -336,6 +545,23 @@ Código JavaScript
 
 **Checkpoint:** Você sabe identificar memory leaks, entende coerção e escreve código defensivo?
 
+### Fase 8: Domínio do Motor (Semanas 15–16)
+> Objetivo: Entender profundamente como o JavaScript executa código por baixo dos panos.
+
+19. ✅ **Módulo 19** — Event Loop e Callbacks Avançado
+
+**Checkpoint:** Você consegue prever a ordem exata de execução de qualquer código assíncrono com microtasks e macrotasks?
+
+### Fase 9: Engenharia e Prática Profissional (Semanas 17–20)
+> Objetivo: Aplicar padrões de arquitetura, trabalhar fora do navegador, testar e depurar código como profissional.
+
+20. ✅ **Módulo 20** — Arquitetura e Design Patterns
+21. ✅ **Módulo 21** — Node.js e Ambiente
+22. ✅ **Módulo 22** — Testes
+23. ✅ **Módulo 23** — Engenharia de Software
+
+**Checkpoint:** Você sabe aplicar design patterns, criar servidores HTTP, escrever testes unitários e fazer profiling de código?
+
 ---
 
 ## 📋 Como Usar Este Material
@@ -344,7 +570,9 @@ Código JavaScript
 2. **Consulta rápida**: Use o índice para ir direto ao tema desejado
 3. **Revisão**: Cada README de módulo tem um resumo do que foi estudado
 4. **Prática**: Execute os exemplos de código no console do navegador ou Node.js
-5. **Exportação**: Use extensões como *Markdown PDF* no VS Code para gerar PDFs
+5. **Projetos**: Cada módulo tem uma pasta `projetos/` com implementações guiadas
+6. **Desafios**: Cada módulo tem uma pasta `desafios/` com exercícios de fixação
+7. **Exportação**: Use extensões como *Markdown PDF* no VS Code para gerar PDFs
 
 ---
 

@@ -17,7 +17,7 @@ Tenho uma estrutura de estudo chamada "JAVASCRIPT-ANATOMIA" com os seguintes mó
 13-dom  
 14-web-apis  
 15-modulos  
-16-erros  
+
 17-seguranca  
 18-performance  
 
